@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Motivacionales Automáticas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        #frase {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #104e8b;
+        }
+        #ad {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="frase">Bienvenido a tu dosis diaria de motivación!</div>
+        <button onclick="siguienteFrase()">Siguiente</button>
+        <div id="ad">
+            <!-- Aquí puedes colocar tu código de Google AdSense -->
+            <p>Espacio para anuncio</p>
+        </div>
+    </div>
+
+    <script>
+        const frases = [
+            "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+            "Cree en ti mismo y todo será posible.",
+            "No sueñes tu vida, vive tu sueño.",
+            "La disciplina es el puente entre metas y logros.",
+            "Cada día es una nueva oportunidad para mejorar.",
+            "No cuentes los días, haz que los días cuenten.",
+            "El único límite eres tú.",
+            "La perseverancia es la clave del éxito.",
+            "Cambia tus pensamientos y cambiarás tu mundo.",
+            "Haz lo que puedas, con lo que tengas, donde estés."
+        ];
+
+        function siguienteFrase() {
+            const indice = Math.floor(Math.random() * frases.length);
+            document.getElementById('frase').innerText = frases[indice];
+        }
+
+        // Cambiar la frase automáticamente cada 10 segundos
+        setInterval(siguienteFrase, 10000);
+    </script>
+</body>
+</html>
